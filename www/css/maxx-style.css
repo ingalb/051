@@ -53,7 +53,7 @@ a {
   #page-intro .slider {
     height: 100%; }
   #page-intro #slide-intro-1 {
-    background: url("../img/intro_bg1.jpg") no-repeat;
+    background: url("../img/intro/intro_bg1_mini.jpg") no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -67,7 +67,7 @@ a {
       bottom: 0;
       background-color: rgba(0, 0, 0, 0.6); }
   #page-intro #slide-intro-2 {
-    background: url("../img/intro_bg2.jpg") no-repeat;
+    background: url("../img/intro/intro_bg2_mini.jpg") no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -81,7 +81,7 @@ a {
       bottom: 0;
       background-color: rgba(0, 0, 0, 0.6); }
       #page-intro #slide-intro-3 {
-        background: url("../img/intro_bg3.jpg") no-repeat;
+        background: url("../img/intro/intro_bg3_mini.jpg") no-repeat;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -95,7 +95,7 @@ a {
           bottom: 0;
           background-color: rgba(0, 0, 0, 0.6); }
       #page-intro #slide-intro-4 {
-            background: url("../img/intro_bg4.jpg") no-repeat;
+            background: url("../img/intro/intro_bg4_mini.jpg") no-repeat;
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
@@ -109,7 +109,7 @@ a {
               bottom: 0;
               background-color: rgba(0, 0, 0, 0.6); }
   .logoh{
-    background: url(http://www.051piazzamaggiore.it/images/logo.png) no-repeat center;
+    background: url(../img/logo.png) no-repeat center;
   }
   #page-intro .slide-intro .info .logo span {
     font-family: 'Berkshire Swash';

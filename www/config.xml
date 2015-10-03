@@ -15,12 +15,11 @@
     </author>
 
   <!--  <gap:plugin name="com.admob.google" version="2.0.14" source="plugins.cordova.io" /> -->
-   <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
-   <gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" />
+    <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+    <gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" />
     <gap:plugin name="cordova-admob" source="npm" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
     <gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" />
-    <gap:plugin name="com.rjfun.cordova.facebookads" source="npm" />
 
 
     <preference name="permissions"  value="none"/>
@@ -38,7 +37,7 @@
     <preference name="auto-hide-splash-screen" value="true" />
 
 
-    <icon src="icon.png" />
+    <icon src="logo.png" />
     <icon src="res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:density="mdpi" />
     <icon src="res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi" />
     <icon src="res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi" />

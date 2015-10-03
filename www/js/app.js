@@ -7,6 +7,30 @@ angular.module('hoss_app', ['ionic', 'hoss_app.controllers', 'hoss_app.services'
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
+
+    admob.setOptions({
+            publisherId: "ca-app-pub-7925487268042880/6770099564",  // Required
+            interstitialAdId: "ca-app-pub-7925487268042880/7097196767",
+            autoShowInterstitial: false
+          });
+
+    admob.createBannerView();
+    admob.requestInterstitialAd();
+
+    var notificationOpenedCallback = function(jsonData) {
+      //alert("Notification received:\n" + JSON.stringify(jsonData));
+      //console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+      // firing an event downwards
+      $rootScope.$broadcast('pushEvent', jsonData);
+    };
+
+    // Update with your OneSignal AppId and googleProjectNumber before running.
+    window.plugins.OneSignal.init("fb965b9c-e77a-11e4-a9ea-97388ec7efa9",
+                                   {googleProjectNumber: "455582282730"},
+                                   notificationOpenedCallback);
+
+    window.plugins.OneSignal.sendTags({app: "051app"});
+
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if(window.cordova && window.cordova.plugins.Keyboard) {
@@ -47,7 +71,7 @@ angular.module('hoss_app', ['ionic', 'hoss_app.controllers', 'hoss_app.services'
                         templateUrl: "templates/app/category.html"
                     }
                 }
-            })            
+            })
             .state('app.shopping_cart', {
                 url: "/shopping_cart",
                 views: {
