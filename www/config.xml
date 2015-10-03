@@ -15,6 +15,8 @@
     </author>
 
   <!--  <gap:plugin name="com.admob.google" version="2.0.14" source="plugins.cordova.io" /> -->
+   <gap:plugin name="cordova-plugin-inappbrowser" source="npm" />
+   <gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" />
     <gap:plugin name="cordova-admob" source="npm" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" />
     <gap:plugin name="onesignal-cordova-plugin-pgb-compat" source="npm" />
@@ -50,7 +52,6 @@
 
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.device-orientation" />
-    <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.statusbar" />
 
