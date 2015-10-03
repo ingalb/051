@@ -1,10 +1,39 @@
 angular.module('hoss_app.controllers', [])
 
 
-    .controller('IntroCtrl', function ($scope) {
+    .controller('IntroCtrl', function ($scope, $window) {
+
+      $scope.setLokali = function(titulli){
+         window.localStorage["lokali"] = titulli;
+      }
+
+      $scope.calculateDimensions = function(gesture) {
+        $scope.dev_width = $window.innerWidth;
+        //console.log($scope.dev_width);
+        if($scope.dev_width<360)
+          {
+            $scope.myStyle = "20px";
+          }
+        else if($scope.dev_width>680)
+          {
+            $scope.myStyle = "32px";
+          }
+        else
+          {
+            $scope.myStyle = "26px";
+          }
+      }
+
+      angular.element($window).bind('resize', function(){
+        $scope.$apply(function() {
+        $scope.calculateDimensions();
+        })
+      });
+
+      $scope.calculateDimensions();
 
     })
-   
+
 
     .controller('AppCtrl', function ($scope, Cates, Products, Carts) {
         $scope.cates = Cates.all();
@@ -12,13 +41,15 @@ angular.module('hoss_app.controllers', [])
 
         $scope.carts = Carts.all();
 
+        $scope.lokali = window.localStorage["lokali"];
+
         $scope.goBack = function () {
             window.history.back();
         };
     })
 
     .controller('ProductMenuCtrl', function ( $scope, $ionicModal, $timeout, $state, $stateParams, Cates, Products) {
-        $scope.cate = Cates.get($stateParams.cateId);      
+        $scope.cate = Cates.get($stateParams.cateId);
         $scope.products = Products.all();
 
         $scope.productByCate = Products.getByCate($stateParams.cateId);
@@ -32,7 +63,7 @@ angular.module('hoss_app.controllers', [])
         $scope.closeModal = function () {
             $scope.modal.hide();
         };
-        
+
         $scope.doOrder = function () {
             $state.go("app.shopping_cart");
             $timeout(function () {
@@ -56,4 +87,3 @@ angular.module('hoss_app.controllers', [])
         };
 
     })
-
