@@ -14,8 +14,8 @@ angular.module('hoss_app', ['ionic', 'hoss_app.controllers', 'hoss_app.services'
             autoShowInterstitial: false
           });
 
-    admob.createBannerView();
-    admob.requestInterstitialAd();
+  //  admob.createBannerView();
+  //  admob.requestInterstitialAd();
 
     var notificationOpenedCallback = function(jsonData) {
       //alert("Notification received:\n" + JSON.stringify(jsonData));
